@@ -11,3 +11,5 @@ if __name__=='__main__':
         if n**x % (10**k)==n%(10**k):
             print(x)
             break
+    else:
+        print(1)
