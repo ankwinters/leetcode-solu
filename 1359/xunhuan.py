@@ -1,5 +1,7 @@
 #!/usr/bin python
 
+#Just for fun.
+#You have been warned.
 if __name__=='__main__':
     num_string=input("please enter two numbers:")
     n,k=num_string.split(' ')
