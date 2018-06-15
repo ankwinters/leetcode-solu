@@ -8,7 +8,7 @@ class Solution:
         :type k: int
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        # # Brute force, O(k*n)
+        # # Brute force, time:O(k*n), space:O(1)
         # for i in range(k):
         #     last= nums[-1]
         #     tmp = nums[0]
@@ -16,8 +16,12 @@ class Solution:
         #         tmp, nums[j] = nums[j], tmp
         #     nums[0] = last
 
-        # More pythonic
-        step =  k - len(nums) * (k // len(nums))
+        # Position substitution, time:O(n), space:O(k)
+
+
+
+        # More pythonic position substitution
+        step =  k % len(nums)
         head = nums[-step:]
         head.extend(nums[0:-step])
         for i in range(len(head)):
