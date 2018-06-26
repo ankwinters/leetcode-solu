@@ -19,11 +19,14 @@ struct ListNode {
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
+        //NULL
+        if(head==NULL)
+            return head;
         // One node
         if(head->next==NULL)
             return head;
         // More than one node
-        ListNode* last_group_end = NULL;
+        ListNode* last_group_end = NULL; 
         auto group_begin = head;
 
         auto returned_ptr = head->next;
