@@ -26,7 +26,7 @@ public:
         if(head->next==NULL)
             return head;
         // More than one node
-        ListNode* last_group_end = NULL; 
+        ListNode* last_group_end = NULL;
         auto group_begin = head;
 
         auto returned_ptr = head->next;
