@@ -40,6 +40,34 @@ class Solution:
 
 
 
+    def longestsubstr(self, s):
+        if len(s) == 0 or len(s) == 1:
+            return s
+
+        max_sub = ""
+
+        for i in range(0, len(s)):
+            #
+            s1 = self.spread(s, i, 0)
+            s2 = self.spread(s, i, 1)
+            if len(s1) > len(max_sub):
+                max_sub = s1
+            if len(s2) > len(max_sub):
+                max_sub = s2
+
+        return max_sub
+
+    def spread(self, s, center, offset):
+        l = center
+        r = center + offset
+
+        while (l>=0 and r<len(s) and s[l]==s[r]):
+            l -= 1
+            r += 1
+
+        l += 1
+        return s[l:r]
+
 
 
 
@@ -49,7 +77,7 @@ def main():
     str_list = ["d", "", "dvdf", "abcabcbb"]
 
     for item in str_list:
-        print(solu.lengthOfLongestSubstring(item))
+        print(solu.longestsubstr(item))
 
 
 

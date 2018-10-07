@@ -107,7 +107,7 @@ void print_list_node(ListNode *node_list)
 int main()
 {
     const int len = 6;
-    int values[len] = {1, 2, 3,4,5,6};
+    int values[len] = {1, 2, 3, 4, 5, 6};
     ListNode *list = create_list_node(values, len);
     print_list_node(list);
     //clean_list_node(list);
